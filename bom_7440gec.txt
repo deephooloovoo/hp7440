@@ -1,0 +1,17 @@
+part     qty type                source
+74LS373  1   latch               everywhere
+74LS04   1   hex inverter        everywhere
+CY7C128A 1   2048x8 sram         https://www.digikey.com/en/products/detail/cypress-semiconductor-corp/CY7C128A-45PC/11553363
+27C010   1   128kx8 prom         https://www.digikey.com/en/products/detail/microchip-technology/AT27C010-70PU/1008593
+
+
+notes: 
+    The cypress RAM part should be a drop-in replacement. 
+    I couldn't find exactly the right size of prom, but you can just tile the
+higher address lines low to limit it to the first 16k. Other chips are usable
+here too - I have a stash of eproms that I rescued from the garbage, so I'll
+probably use those
+    It might be useful to have sockets. I'm not sure if that fits mechanically.
+    I don't know how long the pins should be. I'll need to add those
+    I don't know what the diodes or capacitors are. but they're labeled on the 
+document, and I'm not worrying about it.
